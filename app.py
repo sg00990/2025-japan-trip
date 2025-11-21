@@ -10,4 +10,4 @@ st.set_page_config(
 
 
 st.header("**2025 Japan Trip Blog**")
-st.subheader("*November 1-12*")
+st.write("*November 1-12*")
