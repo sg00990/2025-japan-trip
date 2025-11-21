@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import pydeck as pdk
 
 # page settings
 st.set_page_config(
@@ -23,4 +24,17 @@ with tab1:
     }
 
     df = pd.DataFrame(places)
-    st.map(df, latitude="lat", longitude="lon")
+    layer = pdk.Layer(
+        "ScatterplotLayer",
+        df,
+        get_position=["lon", "lat"],
+        get_radius=80,
+        get_color=[255, 0, 0],
+        pickable=True,
+    )
+    
+    view_state = pdk.ViewState(
+        latitude=35.68, longitude=139.76, zoom=10
+    )
+    
+    st.pydeck_chart(pdk.Deck(layers=[layer], initial_view_state=view_state, tooltip={"text": "{place}"}))
