@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
-import pydeck as pdk
+import folium
+from streamlit_folium import st_folium
 
 # page settings
 st.set_page_config(
@@ -20,21 +21,33 @@ with tab1:
     places = {
         "place": ["Shinjuku", "Shibuya", "Asakusa", "Akihabara", "Ryogoku", "Ikebukuro", "Odaiba", "Yokohama", "Chiba", "Edogawa", "Chiyoda", "Ueno"],
         "lat": [35.6938, 35.6580, 35.7148, 35.6984, 35.6938, 35.7348, 35.6206, 35.4437, 35.6329, 35.6399, 35.6940, 35.7087],
-        "lon": [139.7034, 139.7016, 139.7967, 139.7730, 139.7927, 139.7077, 139.7805, 139.6380, 139.8804, 139.8622, 139.7538, 139.7742]
+        "lon": [139.7034, 139.7016, 139.7967, 139.7730, 139.7927, 139.7077, 139.7805, 139.6380, 139.8804, 139.8622, 139.7538, 139.7742],
+        "photo": [],
+        "caption": []
     }
 
     df = pd.DataFrame(places)
-    layer = pdk.Layer(
-        "ScatterplotLayer",
-        df,
-        get_position=["lon", "lat"],
-        get_radius=80,
-        get_color=[255, 0, 0],
-        pickable=True,
-    )
-    
-    view_state = pdk.ViewState(
-        latitude=35.68, longitude=139.76, zoom=10
-    )
-    
-    st.pydeck_chart(pdk.Deck(layers=[layer], initial_view_state=view_state, tooltip={"text": "{place}"}))
+    # center map on Tokyo
+    m = folium.Map(location=[35.68, 139.76], zoom_start=11)
+
+    # add markers
+    for _, row in df.iterrows():
+
+        # HTML popup with image + caption
+        popup_html = """
+        <div style="width:200px">
+            <img src="{photo}" width="200"><br>
+            <p style="font-size:12px">{caption}</p>
+        </div>
+        """.format(photo=row["photo"], caption=row["caption"])
+
+        popup = folium.Popup(popup_html, max_width=250)
+
+        folium.Marker(
+            [row["lat"], row["lon"]],
+            tooltip=row["place"],
+            popup=popup,
+            icon=folium.Icon(color="red", icon="camera")
+        ).add_to(m)
+
+    st_folium(m, width=900)
