@@ -1,5 +1,6 @@
 import streamlit as st
 
 with st.sidebar:
-  st.header("My Japan Trip")
-  st.write("*November 1-12, 2025*")
+  col1, col2, col3 = st.columns()
+  col2.header("My Japan Trip")
+  col2.write("*November 1-12, 2025*")
