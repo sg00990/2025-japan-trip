@@ -11,4 +11,4 @@ st.set_page_config(
 with st.sidebar:
   col1, col2, col3 = st.columns([.5, 3, .5])
   col2.header("2025 Tokyo Blog")
-  col2.write("*November 1-12, 2025*")
+  col2.write("*Nov. 1-12, 2025*")
