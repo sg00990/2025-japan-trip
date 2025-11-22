@@ -69,7 +69,7 @@ with tab2:
         {"day": "Day 9 - Nov 9", "place": "Shinjuku", "notes": "Koreatown, see the Godzilla statue, Harajuku, eat crepes"},
         {"day": "Day 10 - Nov 10", "place": "Asakusa", "notes": "Nakemise Shopping Street, Former Yasuda Garden, Sumo Museum"},
         {"day": "Day 11 - Nov 11", "place": "Odaiba", "notes": "teamLab Planets, Unicorn Gundam, DECKS, Diver City, Aqua City, Statue of Liberty"},
-        {"day": "Day 12 - Nov 12", "place": "Ueno", "notes": "Check out of hotel, Ueno Zoo, Ueno Park, Haneda airport (HND->ATL)}
+        {"day": "Day 12 - Nov 12", "place": "Ueno", "notes": "Check out of hotel, Ueno Zoo, Ueno Park, Haneda airport (HND->ATL)"}
     ]
     
     st.subheader("📅 Itinerary")
