@@ -97,3 +97,9 @@ with tab2:
                 <p style="font-size:14px; color:#555;">{stop['notes']}</p>
             </div>
             """, unsafe_allow_html=True)
+
+with tab3:
+
+    # jojo store, february cafe, yokohama cable car, photobooth, kimono, soba place, odaiba at night, asakusa in general
+    
+    col1, col2 = st.columns([1, 3])
