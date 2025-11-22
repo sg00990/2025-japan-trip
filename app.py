@@ -81,7 +81,6 @@ with tab2:
                 background-color:#f8f8f8;
                 margin-bottom:12px;
             ">
-                <!-- Date pill -->
                 <span style="
                     display:inline-block;
                     background:#ffccd5;
@@ -94,11 +93,7 @@ with tab2:
                 ">
                     {stop['day']}
                 </span>
-            
-                <!-- Place name -->
                 <h4 style="margin:6px 0 2px 0; color:#333333;">{stop['place']}</h4>
-            
-                <!-- Notes -->
-                <p style="font-size:14px; color:#555555;">{stop['notes']}</p>
+                <p style="font-size:14px; color:#555;">{stop['notes']}</p>
             </div>
             """, unsafe_allow_html=True)
