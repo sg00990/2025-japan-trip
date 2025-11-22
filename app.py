@@ -61,15 +61,15 @@ with tab2:
         {"day": "Day 1 — Nov 1", "place": "Atlanta", "notes": "Flights (ATL->LAX, LAX->HND)"},
         {"day": "Day 2 — Nov 2", "place": "Asakusa", "notes": "Check-in to hotel, grab dinner at Family Mart"},
         {"day": "Day 3 — Nov 3", "place": "Shibuya", "notes": "Shibuya Scramble Crossing, get glasses at JINS, shopping"},
-        {"day": "Day 4 - Nov 4", "place": "Chiba", "notes": "Tokyo Sea Life Park, Tokyo Disneyland"},
+        {"day": "Day 4 - Nov 4", "place": "Edogawa/Chiba", "notes": "Tokyo Sea Life Park, Tokyo Disneyland"},
         {"day": "Day 5 - Nov 5", "place": "Yokohama", "notes": "Yamashita Park, Chinatown, World Porters, cable cars to the station"},
         {"day": "Day 6 - Nov 6", "place": "Asakusa", "notes": "Tea ceremony, wear kimonos, Senso-ji, eat some melon bread"},
-        {"day": "Day 7 - Nov 7", "place": "Ikebukuro", "notes": "Largest Animate in Ikebukuro, revisit Shibuya"},
-        {"day": "Day 8 - Nov 8", "place": "Chiyoda", "notes": "Imperial Palace East National Gardens, Kanda Myoujin Shrine, Jimbocho, JJK movie at TOHO Ueno"},
-        {"day": "Day 9 - Nov 9", "place": "Shinjuku", "notes": "Koreatown, see the Godzilla statue, Harajuku, eat crepes"},
-        {"day": "Day 10 - Nov 10", "place": "Asakusa", "notes": "Nakemise Shopping Street, Former Yasuda Garden, Sumo Museum"},
+        {"day": "Day 7 - Nov 7", "place": "Ikebukuro/Shibuya", "notes": "Largest Animate in Ikebukuro, revisit Shibuya"},
+        {"day": "Day 8 - Nov 8", "place": "Chiyoda/Ueno", "notes": "Imperial Palace East National Gardens, Kanda Myoujin Shrine, Jimbocho, JJK movie at TOHO Ueno"},
+        {"day": "Day 9 - Nov 9", "place": "Shinjuku/Shibuya", "notes": "Koreatown, see the Godzilla statue, Harajuku, eat crepes"},
+        {"day": "Day 10 - Nov 10", "place": "Asakusa/Ryogoku", "notes": "Nakemise Shopping Street, Former Yasuda Garden, Sumo Museum"},
         {"day": "Day 11 - Nov 11", "place": "Odaiba", "notes": "teamLab Planets, Unicorn Gundam, DECKS, Diver City, Aqua City, Statue of Liberty"},
-        {"day": "Day 12 - Nov 12", "place": "Ueno", "notes": "Check out of hotel, Ueno Zoo, Ueno Park, Haneda airport (HND->ATL)"}
+        {"day": "Day 12 - Nov 12", "place": "Asakusa, Ueno", "notes": "Check out of hotel, last shopping in Asakusa, Ueno Zoo, Ueno Park, Haneda airport (HND->ATL)"}
     ]
     
     for stop in itinerary:
