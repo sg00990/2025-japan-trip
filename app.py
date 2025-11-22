@@ -67,7 +67,7 @@ with tab2:
         {"day": "Day 7 - Nov 7", "place": "Ikebukuro/Shibuya", "notes": "Largest Animate in Ikebukuro, revisit Shibuya"},
         {"day": "Day 8 - Nov 8", "place": "Chiyoda/Ueno", "notes": "Imperial Palace East National Gardens, Kanda Myoujin Shrine, Jimbocho, JJK movie at TOHO Ueno"},
         {"day": "Day 9 - Nov 9", "place": "Shinjuku/Shibuya", "notes": "Koreatown, see the Godzilla statue, Harajuku, eat crepes"},
-        {"day": "Day 10 - Nov 10", "place": "Asakusa/Ryogoku", "notes": "Nakemise Shopping Street, Former Yasuda Garden, Sumo Museum"},
+        {"day": "Day 10 - Nov 10", "place": "Asakusa/Ryogoku", "notes": "Nakamise Shopping Street, Former Yasuda Garden, Sumo Museum"},
         {"day": "Day 11 - Nov 11", "place": "Odaiba", "notes": "teamLab Planets, Unicorn Gundam, DECKS, Diver City, Aqua City, Statue of Liberty"},
         {"day": "Day 12 - Nov 12", "place": "Asakusa, Ueno", "notes": "Check out of hotel, last shopping in Asakusa, Ueno Zoo, Ueno Park, Haneda airport (HND->ATL)"}
     ]
