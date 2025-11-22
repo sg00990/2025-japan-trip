@@ -55,3 +55,22 @@ with tab1:
                 icon=folium.Icon(color="red", icon="camera")
             ).add_to(m)
     st_folium(m, use_container_width=True)
+
+with tab2:
+    itinerary = [
+        {"day": "Day 1 — Nov 1", "place": "Shinjuku", "notes": "Hotel check-in, Omoide Yokocho, Tokyo Met Gov building"},
+        {"day": "Day 2 — Nov 2", "place": "Asakusa", "notes": "Senso-ji, Sumida River, Skytree view"},
+        {"day": "Day 3 — Nov 3", "place": "Yokohama", "notes": "Minato Mirai, Cup Noodles Museum"},
+    ]
+    
+    st.subheader("📅 Itinerary")
+    
+    for stop in itinerary:
+        with st.container():
+            st.markdown(f"""
+            <div style="padding:16px; border-radius:10px; background-color:#f8f8f8; margin-bottom:12px;">
+                <h4 style="margin-bottom:4px;">{stop['day']}</h4>
+                <b>{stop['place']}</b><br>
+                <span style="font-size:14px; color:#555;">{stop['notes']}</span>
+            </div>
+            """, unsafe_allow_html=True)
