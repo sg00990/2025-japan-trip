@@ -104,6 +104,10 @@ with tab3:
     col1, col2 = st.columns([1, 3])
     col1.image('img/skytree.jpg')
     col2.subheader('*1) Asakusa in general*')
-    col2.write("""My friend and I stayed at the Hen na Hotel Tawaramachi in Asakusa, and we ended up rearranging our plans more than once just so we could spend extra time in the neighborhood. Our room had an incredible view of the Tokyo Skytree — honestly, you can spot it from almost anywhere in the area — and waking up to that skyline never got old.""")
+    col2.write("""My friend and I stayed at the Hen na Hotel Tawaramachi in Asakusa, and we ended up rearranging our plans more than once just so we could spend extra time in the neighborhood. Our room had an incredible view of the Tokyo Skytree and waking up to that skyline never got old. Honestly, we could see the Skytree from the plane!""")
     col2.write("""Asakusa isn’t as overwhelming as Shibuya or Shinjuku, but that’s exactly what makes it special. It strikes the perfect balance: quiet side streets, cozy cafés, a Don Quixote and Uniqlo for late-night errands, and of course the iconic Senso-ji temple. The whole neighborhood feels charming and lived-in, the kind of place where you can wander without feeling rushed. I could definitely see myself living here one day… in my dreams, at least.""")
+
+    col3, col4 = st.columns([3, 1])
+    col4.image('img/jojo.jpg')
+    
     
