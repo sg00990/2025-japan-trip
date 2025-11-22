@@ -54,4 +54,4 @@ with tab1:
                 tooltip=row["place"],
                 icon=folium.Icon(color="red", icon="camera")
             ).add_to(m)
-    st_folium(m, width=900)
+    st_folium(m, width="100%")
