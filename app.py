@@ -11,6 +11,11 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+def embed_image(path, width=200):
+    with open(path, "rb") as f:
+        img = base64.b64encode(f.read()).decode()
+    return f'<img src="data:image/jpeg;base64,{img}" width="{width}"/>'
+
 # main content
 st.header("**2025 Japan Trip Blog**")
 st.write("*November 1-12*")
@@ -31,21 +36,19 @@ with tab1:
 
     # add markers
     for _, row in df.iterrows():
-
-        # HTML popup with image + caption
-        popup_html = f"""
-        <div style="width:200px">
-            <img src="{row["photo"]}" width="200"><br>
-        </div>
-        """
-
-        popup = folium.Popup(popup_html, max_width=250)
-
-        folium.Marker(
-            [row["lat"], row["lon"]],
-            tooltip=row["place"],
-            popup=popup,
-            icon=folium.Icon(color="red", icon="camera")
-        ).add_to(m)
-
-    st_folium(m, width=900)
+    
+            html = f"""
+            <div style="width:200px">
+                {embed_image(row["photo"])}
+                <p style="font-size:12px">{row["caption"]}</p>
+            </div>
+            """
+    
+            popup = folium.Popup(html, max_width=250)
+    
+            folium.Marker(
+                [row["lat"], row["lon"]],
+                popup=popup,
+                tooltip=row["place"],
+                icon=folium.Icon(color="red", icon="camera")
+            ).add_to(m)
