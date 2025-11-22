@@ -29,7 +29,7 @@ with tab1:
         "lat": [35.6938, 35.6580, 35.7148, 35.6984, 35.6938, 35.7348, 35.6206, 35.4437, 35.6329, 35.6399, 35.6940, 35.7087],
         "lon": [139.7034, 139.7016, 139.7967, 139.7730, 139.7927, 139.7077, 139.7805, 139.6380, 139.8804, 139.8622, 139.7538, 139.7742],
         "photo": ["img/shinjuku.jpg", "img/shibuya.jpg", "img/asakusa.jpg", "img/akiba.jpg", "img/ryogoku.jpg", "img/ikebukuro.jpg", "img/odaiba.jpg", "img/yokohama.jpg", "img/chiba.jpg", "img/edogawa.jpg", "img/chiyoda.jpg", "img/ueno.jpg"],
-        "caption": ["Godzilla Statue", "Shibuya Scramble Building", "Asahi Beer Headquarters", "Former Yasada Garden", "Shopping in Animate", "Statue of Liberty", "Yamashita Park", "Disneyland", "Tokyo Sea Life Park", "Ueno Zoo"]
+        "caption": ["Godzilla Statue", "Shibuya Scramble Building", "Asahi Beer Headquarters", "Kanda Shrine", "Former Yasada Garden", "Shopping in Animate", "Statue of Liberty", "Yamashita Park", "Disneyland", "Tokyo Sea Life Park", "Imperial Palace Gardens", "Ueno Zoo"]
     }
 
     df = pd.DataFrame(places)
