@@ -33,12 +33,11 @@ with tab1:
     for _, row in df.iterrows():
 
         # HTML popup with image + caption
-        popup_html = """
+        popup_html = f"""
         <div style="width:200px">
-            <img src="{photo}" width="200"><br>
-            <p style="font-size:12px">{caption}</p>
+            <img src="{row["photo"]}" width="200"><br>
         </div>
-        """.format(photo=row["photo"])
+        """
 
         popup = folium.Popup(popup_html, max_width=250)
 
