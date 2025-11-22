@@ -77,9 +77,25 @@ with tab2:
     for stop in itinerary:
         with st.container():
             st.markdown(f"""
-            <div style="padding:16px; border-radius:10px; background-color:#f8f8f8; margin-bottom:12px;">
-                <h4 style="margin-bottom:4px;">{stop['day']}</h4>
-                <b>{stop['place']}</b><br>
-                <span style="font-size:14px; color:#555;">{stop['notes']}</span>
+            <div style="
+                padding:16px;
+                border-radius:12px;
+                background-color:#f8f8f8;
+                margin-bottom:12px;
+            ">
+                <span style="
+                    display:inline-block;
+                    background:#ffccd5;
+                    color:#b3003b;
+                    padding:4px 10px;
+                    border-radius:8px;
+                    font-weight:600;
+                    font-size:14px;
+                    margin-bottom:6px;
+                ">
+                    {stop['day']}
+                </span>
+                <h4 style="margin:6px 0 2px 0;">{stop['place']}</h4>
+                <p style="font-size:14px; color:#555;">{stop['notes']}</p>
             </div>
             """, unsafe_allow_html=True)
