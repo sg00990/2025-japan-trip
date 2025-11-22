@@ -38,7 +38,7 @@ with tab1:
             <img src="{photo}" width="200"><br>
             <p style="font-size:12px">{caption}</p>
         </div>
-        """.format(photo=row["photo"], caption=row["caption"])
+        """.format(photo=row["photo"])
 
         popup = folium.Popup(popup_html, max_width=250)
 
