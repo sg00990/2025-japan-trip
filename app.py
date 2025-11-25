@@ -109,5 +109,6 @@ with tab3:
 
     col3, col4 = st.columns([3, 1])
     col4.image('img/jojo.jpg')
-    
+    col3.write("""JoJo’s Bizarre Adventure is my all-time favorite anime, so stumbling upon a whole JOJO World store in Shibuya was a very pleasant surprise, especially since it wasn’t there during my last trip. The space had everything: a merch shop, a themed café, and a few mini-games.""")
+    col3.write("""Because I went on Culture Day (rookie mistake), it was incredibly crowded, and I didn’t get to explore as much as I wanted. Still, I managed to grab a Giorno Giovanna shoulder bag as a souvenir, which instantly became one of my favorite purchases from the trip. Maybe next time I’ll treat myself and go all-in on some artwork!""")
     
