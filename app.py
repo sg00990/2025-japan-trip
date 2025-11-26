@@ -100,7 +100,7 @@ with tab2:
 
 with tab3:
 
-    # photobooth, kimono, soba place, odaiba at night
+    # soba place, odaiba at night
     col1, col2 = st.columns([1, 3])
     col1.image('img/skytree.jpg')
     col2.subheader('*1) Asakusa in general*')
@@ -116,7 +116,7 @@ with tab3:
     st.divider()
     
     col5, col6 = st.columns([1, 3])
-    col5.image('img/febcafe.jpg')
+    col5.image('img/febcafe.jpg', width='stretch)
     col6.subheader('*3) February Café*')
     col6.write("""Just a short walk from our hotel in Asakusa was the cutest little spot called February Café, known for its delicious toast. Since my friend and I always got there early, we had our pick between the butter toast set and the cheese toast set. I went with the butter toast both times and honestly, I still think about it in the mornings.""")
     col6.write("""It’s a thick, warm slice of toast layered with butter and syrup, with just the slightest hint of cinnamon. If you’re ever in Asakusa, I definitely recommend making a stop here!""")
@@ -134,3 +134,14 @@ with tab3:
     col10.subheader('*5) Purikura*')
     col10.write("""My friend and I take Korea-style photo booth pictures all the time, so we were very excited to finally try a Japanese purikura machine. And wow, it was crazy.""")
     col10.write("""The booth actually gives you poses to follow, so we were scrambling to keep up while trying not to laugh. Afterward, you get to decorate the photos with stickers, doodles, and effects, which was honestly the best part. We were a little shocked at how much the machine lightened our skin and reshaped our faces, but it just added to the hilarity. Best 500 yen spent!""")
+    st.divider()
+
+    col11, col12 = st.columns([3, 1])
+    col12.image('img/kimono.jpg')
+    col11.subheader('*6) Tea Ceremony + Kimono Rental*')
+    col11.write("""I didn’t do a kimono rental during my last trip to Japan, but someone I exchange postcards with recommended MAIKOYA in Asakusa, so my friend and I booked a kimono rental and tea ceremony experience. They offer lots of different packages, but this one felt good for us.""")
+    col11.write("""Honestly, the highlight for me wasn’t even the photos or the ceremony — it was chatting with the ladies who helped me put on my kimono. At first they were pretty quiet, but once they realized I could speak Japanese, they opened up and became so talkative and sweet. It made the whole experience feel so personal!""")
+    col11.write("""The tea ceremony itself was interesting to sit through, and afterward my friend and I spent time wandering around Senso-ji in our kimonos, taking photos and enjoying the atmosphere. It ended up being one of the most memorable parts of our trip.""")
+    st.divider()
+
+    col13, col14 = st.columns([1, 3])
