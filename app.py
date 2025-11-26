@@ -100,21 +100,37 @@ with tab2:
 
 with tab3:
 
-    # february cafe, yokohama cable car, photobooth, kimono, soba place, odaiba at night
+    # photobooth, kimono, soba place, odaiba at night
     col1, col2 = st.columns([1, 3])
     col1.image('img/skytree.jpg')
     col2.subheader('*1) Asakusa in general*')
     col2.write("""My friend and I stayed at the Hen na Hotel Tawaramachi in Asakusa, and we ended up rearranging our plans more than once just so we could spend extra time in the neighborhood. Our room had an incredible view of the Tokyo Skytree and waking up to that skyline never got old. Honestly, we could see the Skytree from the plane!""")
     col2.write("""Asakusa isn’t as overwhelming as Shibuya or Shinjuku, but that’s exactly what makes it special. It strikes the perfect balance: quiet side streets, cozy cafés, a Don Quixote and Uniqlo for late-night errands, and of course the iconic Senso-ji temple. The whole neighborhood feels charming and lived-in, the kind of place where you can wander without feeling rushed. I could definitely see myself living here one day… in my dreams, at least.""")
-
+    st.divider()
+    
     col3, col4 = st.columns([3, 1])
     col4.image('img/jojo.jpg')
     col3.subheader('*2) JOJO World*')
     col3.write("""JoJo’s Bizarre Adventure is my all-time favorite anime, so stumbling upon a whole JOJO World store in Shibuya was a very pleasant surprise, especially since it wasn’t there during my last trip. The space had everything: a merch shop, a themed café, and a few mini-games.""")
     col3.write("""Because I went on Culture Day (rookie mistake), it was incredibly crowded, and I didn’t get to explore as much as I wanted. Still, I managed to grab a Giorno Giovanna shoulder bag as a souvenir, which instantly became one of my favorite purchases from the trip. Maybe next time I’ll treat myself and go all-in on some artwork!""")
-
+    st.divider()
+    
     col5, col6 = st.columns([1, 3])
     col5.image('img/febcafe.jpg')
     col6.subheader('*3) February Café*')
     col6.write("""Just a short walk from our hotel in Asakusa was the cutest little spot called February Café, known for its delicious toast. Since my friend and I always got there early, we had our pick between the butter toast set and the cheese toast set. I went with the butter toast both times and honestly, I still think about it in the mornings.""")
     col6.write("""It’s a thick, warm slice of toast layered with butter and syrup, with just the slightest hint of cinnamon. If you’re ever in Asakusa, I definitely recommend making a stop here!""")
+    st.divider()
+
+    col7, col8 = st.columns([3, 1])
+    col8.image('img/cablecar.jpg')
+    col7.subheader('*4) Cable Cars in Yokohama*')
+    col7.write("""While exploring Yokohama, my friend and I made our way through Yamashita Park, Chinatown, and World Porters. By the end of the day, we were exhausted and quickly discovered that the nearest train station was nearly a 30-minute walk away. Total devastation (for our feet).""")
+    col7.write("""Our saving grace was YOKOHAMA AIR CABIN! It is a cable car system that glides across the Ooka River straight to Sakuragichō Station. We hopped on immediately, and it ended up being one of the most unexpectedly magical moments of the trip. Since it was already dark, the whole landscape was glowing: the Ferris wheel lit up in colors, the Landmark Tower shining over the waterfront, and the reflections shimmering on the river below.""")
+    st.divider()
+        
+    col9, col10 = st.columns([1, 3])
+    col9.image('img/photobooth.jpg')
+    col10.subheader('*5) Purikura*')
+    col10.write("""My friend and I take Korea-style photo booth pictures all the time, so we were very excited to finally try a Japanese purikura machine. And wow, it was crazy.""")
+    col10.write("""The booth actually gives you poses to follow, so we were scrambling to keep up while trying not to laugh. Afterward, you get to decorate the photos with stickers, doodles, and effects, which was honestly the best part. We were a little shocked at how much the machine lightened our skin and reshaped our faces, but it just added to the hilarity. Best 500 yen spent!""")
