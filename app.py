@@ -145,3 +145,14 @@ with tab3:
     st.divider()
 
     col13, col14 = st.columns([1, 3])
+    col13.image('img/soba.jpg')
+    col14.subheader('*7) Soba at Kanda Matsuya*')
+    col14.write("""Before this trip, my only experience with soba was from a microwavable cup or a quick meal at Haneda Airport, so when my friend and I found ourselves near Akihabara, we decided to try real soba at a restaurant called Kanda Matsuya. There was a bit of a wait, but it was absolutely worth it.""")
+    col14.write("""I ordered kitsune soba, which comes topped with a piece of deep-fried tofu, and a drink listed as “soda pop.” The soba was amazing, but the surprise star was the “soda pop,” which turned out to be Mitsuya Cider. It instantly became my new favorite soda. It tastes like a cross between Sprite and ginger ale, but lighter and a little sweeter. Highly recommend trying it if you see it!""")
+    st.divider()
+
+    col15, col16 = st.columns([3, 1])
+    col16.image('img/liberty.jpg')
+    col15.subheader('*8) Odaiba at Night*')
+    col15.write("""On our last full day in Japan, my friend and I decided to spend the evening in Odaiba and it ended up being one of the most beautiful nights of the trip. We explored teamLab Planets, wandered through three different shopping malls, and even stopped by the Odaiba Statue of Liberty. But nothing prepared us for how magical the area looks after dark.""")
+    col15.write("""As we stepped out of DiverCity, we were immediately met with the massive Gundam statue glowing against the night sky. Then, as we walked toward DECKS, the view opened up to the Rainbow Bridge and a skyline of skyscrapers shimmering across the water. Even the Statue of Liberty replica looked cooler at night, illuminated with the city behind it. We honestly couldn’t stop saying “whoa” as we walked along the waterfront.""")
