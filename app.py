@@ -100,7 +100,7 @@ with tab2:
 
 with tab3:
 
-    # jojo store, february cafe, yokohama cable car, photobooth, kimono, soba place, odaiba at night, asakusa in general
+    # february cafe, yokohama cable car, photobooth, kimono, soba place, odaiba at night
     col1, col2 = st.columns([1, 3])
     col1.image('img/skytree.jpg')
     col2.subheader('*1) Asakusa in general*')
@@ -109,6 +109,12 @@ with tab3:
 
     col3, col4 = st.columns([3, 1])
     col4.image('img/jojo.jpg')
+    col3.subheader('*2) JOJO World*')
     col3.write("""JoJo’s Bizarre Adventure is my all-time favorite anime, so stumbling upon a whole JOJO World store in Shibuya was a very pleasant surprise, especially since it wasn’t there during my last trip. The space had everything: a merch shop, a themed café, and a few mini-games.""")
     col3.write("""Because I went on Culture Day (rookie mistake), it was incredibly crowded, and I didn’t get to explore as much as I wanted. Still, I managed to grab a Giorno Giovanna shoulder bag as a souvenir, which instantly became one of my favorite purchases from the trip. Maybe next time I’ll treat myself and go all-in on some artwork!""")
-    
+
+    col5, col6 = st.columns([1, 3])
+    col5.image('img/febcafe.jpg')
+    col6.subheader('*3) February Café*')
+    col6.write("""Just a short walk from our hotel in Asakusa was the cutest little spot called February Café, known for its delicious toast. Since my friend and I always got there early, we had our pick between the butter toast set and the cheese toast set. I went with the butter toast both times and honestly, I still think about it in the mornings.""")
+    col6.write("""It’s a thick, warm slice of toast layered with butter and syrup, with just the slightest hint of cinnamon. If you’re ever in Asakusa, I definitely recommend making a stop here!""")
