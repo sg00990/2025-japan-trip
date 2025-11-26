@@ -116,7 +116,7 @@ with tab3:
     st.divider()
     
     col5, col6 = st.columns([1, 3])
-    col5.image('img/febcafe.jpg', width='stretch)
+    col5.image('img/febcafe.jpg', width='stretch')
     col6.subheader('*3) February Café*')
     col6.write("""Just a short walk from our hotel in Asakusa was the cutest little spot called February Café, known for its delicious toast. Since my friend and I always got there early, we had our pick between the butter toast set and the cheese toast set. I went with the butter toast both times and honestly, I still think about it in the mornings.""")
     col6.write("""It’s a thick, warm slice of toast layered with butter and syrup, with just the slightest hint of cinnamon. If you’re ever in Asakusa, I definitely recommend making a stop here!""")
