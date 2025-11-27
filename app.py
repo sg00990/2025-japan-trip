@@ -4,7 +4,7 @@ import folium
 from streamlit_folium import st_folium
 import base64
 import os
-from PIL import Image
+from PIL import Image, ExifTags
 
 # page settings
 st.set_page_config(
@@ -18,6 +18,28 @@ def embed_image(path, width=200):
     with open(path, "rb") as f:
         img = base64.b64encode(f.read()).decode()
     return f'<img src="data:image/jpeg;base64,{img}" width="{width}"/>'
+
+def open_image_correct_orientation(path):
+    img = Image.open(path)
+
+    try:
+        for orientation in ExifTags.TAGS.keys():
+            if ExifTags.TAGS[orientation]=='Orientation':
+                break
+        exif = img._getexif()
+        if exif is not None:
+            orientation_value = exif.get(orientation, None)
+
+            if orientation_value == 3:
+                img = img.rotate(180, expand=True)
+            elif orientation_value == 6:
+                img = img.rotate(270, expand=True)
+            elif orientation_value == 8:
+                img = img.rotate(90, expand=True)
+    except Exception as e:
+        pass
+    return img
+    
 
 # main content
 st.header("**2025 Japan Trip Blog**")
@@ -166,4 +188,6 @@ with tab4:
     cols = st.columns(2)
     
     for i, p in enumerate(photos):
-        cols[i % 2].image(Image.open(f"{folder}/{p}"), use_column_width=True)
+        img_path = os.path.join(folder, p)  # full path to the image
+        img = Image.open(img_path)
+        cols[i % 2].image(img, use_column_width=True)
