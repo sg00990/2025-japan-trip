@@ -4,6 +4,7 @@ import folium
 from streamlit_folium import st_folium
 import base64
 import os
+from PIL import Image
 
 # page settings
 st.set_page_config(
@@ -159,15 +160,10 @@ with tab3:
     col15.write("""As we stepped out of DiverCity, we were immediately met with the massive Gundam statue glowing against the night sky. Then, as we walked toward DECKS, the view opened up to the Rainbow Bridge and a skyline of skyscrapers shimmering across the water. Even the Statue of Liberty replica looked cooler at night, illuminated with the city behind it. We honestly couldn’t stop saying “whoa” as we walked along the waterfront.""")
 
 with tab4:
-    folder = "img/misc"   # your folder path
-    photos = sorted([f for f in os.listdir(folder) if f.lower().endswith(('.png', '.jpg', '.jpeg'))])
+    folder = "img/misc"
+    photos = sorted([p for p in os.listdir(folder) if p.endswith((".jpg",".png",".jpeg"))])
     
-    # Build HTML
-    html = '<div style="column-count: 2; column-gap: 1em;">'
+    cols = st.columns(2)
     
-    for p in photos:
-        html += f'<img src="{folder}/{p}" style="width:100%; margin-bottom:1em;">'
-    
-    html += '</div>'
-    
-    st.markdown(html, unsafe_allow_html=True)
+    for i, p in enumerate(photos):
+        cols[i % 2].image(Image.open(f"{folder}/{p}"), use_column_width=True)
