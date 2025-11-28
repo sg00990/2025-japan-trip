@@ -3,6 +3,7 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 import base64
+import io
 import os
 from PIL import Image, ExifTags, ImageOps
 
