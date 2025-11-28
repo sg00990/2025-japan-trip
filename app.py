@@ -104,11 +104,6 @@ def open_image_correct_orientation(path):
         pass
     return img
 
-def create_map():
-    m = folium.Map(location=[35.68, 139.76], zoom_start=11)
-    # add markers...
-    return m
-
 # main content
 st.markdown("""
 # 🇯🇵 2025 Japan Trip Blog  
@@ -167,27 +162,31 @@ with tab1:
     st.markdown('######')
     
     # center map on Tokyo
-    m = create_map()
-
-    # add markers
-    for _, row in df.iterrows():
     
-            html = f"""
-            <div style="width:200px">
-                {embed_image(row["photo"])}
-                <p style="font-size:12px">{row['caption']}</p>
-            </div>
-            """
+    if "map" not in st.session_state:
+        m = folium.Map(location=[35.68, 139.76], zoom_start=11)
+        # add markers
+        for _, row in df.iterrows():
+        
+                html = f"""
+                <div style="width:200px">
+                    {embed_image(row["photo"])}
+                    <p style="font-size:12px">{row['caption']}</p>
+                </div>
+                """
+        
+                popup = folium.Popup(html, max_width=250)
+        
+                folium.Marker(
+                    [row["lat"], row["lon"]],
+                    popup=popup,
+                    tooltip=row["place"],
+                    icon=folium.Icon(color="red", icon="camera")
+                ).add_to(m)
+        
+        st.session_state.map = m
     
-            popup = folium.Popup(html, max_width=250)
-    
-            folium.Marker(
-                [row["lat"], row["lon"]],
-                popup=popup,
-                tooltip=row["place"],
-                icon=folium.Icon(color="red", icon="camera")
-            ).add_to(m)
-    st_folium(m, use_container_width=True)
+    st_folium(st.session_state.map, use_container_width=True)
 
 with tab2:
     itinerary = [
