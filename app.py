@@ -121,10 +121,6 @@ st.markdown("""
         margin-bottom: 6px;
         font-weight: 700;
     ">🇯🇵 2025 Japan Trip Blog</h1>
-
-    <p style="margin-top:0; color:#666; font-size:18px;">
-        November 1–12 • Tokyo • Yokohama • Chiba
-    </p>
 </div>
 """, unsafe_allow_html=True)
 
