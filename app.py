@@ -104,7 +104,6 @@ def open_image_correct_orientation(path):
         pass
     return img
 
-@st.cache_resource
 def create_map():
     m = folium.Map(location=[35.68, 139.76], zoom_start=11)
     # add markers...
