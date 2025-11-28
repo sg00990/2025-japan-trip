@@ -190,5 +190,5 @@ with tab4:
     for i, p in enumerate(photos):
         img_path = os.path.join(folder, p)  # full path to the image
         img = Image.open(img_path)
-        im = ImageOps.exif_transpose(im)
+        img = ImageOps.exif_transpose(img)
         cols[i % 2].image(img, use_column_width=True)
