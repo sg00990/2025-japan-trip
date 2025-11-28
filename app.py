@@ -81,7 +81,28 @@ st.set_page_config(
 
 def embed_image(path, max_width=200):
     img = Image.open(path)
-    img.thumbnail((max_width, max_width))  # reduce size
+
+    # Fix orientation
+    try:
+        for orientation in ExifTags.TAGS.keys():
+            if ExifTags.TAGS[orientation]=='Orientation':
+                break
+        exif = img._getexif()
+        if exif is not None:
+            orientation_value = exif.get(orientation, None)
+            if orientation_value == 3:
+                img = img.rotate(180, expand=True)
+            elif orientation_value == 6:
+                img = img.rotate(270, expand=True)
+            elif orientation_value == 8:
+                img = img.rotate(90, expand=True)
+    except Exception:
+        pass
+
+    # Resize for thumbnail
+    img.thumbnail((max_width, max_width))
+
+    # Convert to Base64 for HTML
     buffer = io.BytesIO()
     img.save(buffer, format="JPEG")
     b64 = base64.b64encode(buffer.getvalue()).decode()
