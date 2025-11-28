@@ -157,6 +157,8 @@ with tab1:
             <div style="font-size:22px; color:#b3003b;">12 days</div>
         </div>
     """, unsafe_allow_html=True)
+
+    st.markdown('######')
     
     # center map on Tokyo
     m = folium.Map(location=[35.68, 139.76], zoom_start=11)
