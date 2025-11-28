@@ -108,7 +108,7 @@ def open_image_correct_orientation(path):
 # main content
 st.markdown("""
 # 🇯🇵 2025 Japan Trip Blog  
-### Tokyo • Yokohama • Chiba
+###### Tokyo • Yokohama • Chiba
 """)
 
 tab1, tab2, tab3, tab4 = st.tabs(["Map", "Itinerary", "Highlights", "Gallery"])
