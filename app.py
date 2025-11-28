@@ -167,31 +167,28 @@ with tab1:
     
     # center map on Tokyo
     
-    if "map" not in st.session_state:
-        m = folium.Map(location=[35.68, 139.76], zoom_start=11)
-        # add markers
-        for _, row in df.iterrows():
-        
-                html = f"""
-                <div style="width:200px">
-                    {embed_image(row["photo"])}
-                    <p style="font-size:12px">{row['caption']}</p>
-                </div>
-                """
-        
-                popup = folium.Popup(html, max_width=250)
-        
-                folium.Marker(
-                    [row["lat"], row["lon"]],
-                    popup=popup,
-                    tooltip=row["place"],
-                    icon=folium.Icon(color="red", icon="camera")
-                ).add_to(m)
-        
-        st.session_state.map = m
 
-
-    st_folium(st.session_state.map, use_container_width=True)
+    m = folium.Map(location=[35.68, 139.76], zoom_start=11)
+    # add markers
+    for _, row in df.iterrows():
+    
+            html = f"""
+            <div style="width:200px">
+                {embed_image(row["photo"])}
+                <p style="font-size:12px">{row['caption']}</p>
+            </div>
+            """
+    
+            popup = folium.Popup(html, max_width=250)
+    
+            folium.Marker(
+                [row["lat"], row["lon"]],
+                popup=popup,
+                tooltip=row["place"],
+                icon=folium.Icon(color="red", icon="camera")
+            ).add_to(m)
+        
+    st_folium(m, use_container_width=True)
 
 with tab2:
     itinerary = [
