@@ -107,22 +107,9 @@ def open_image_correct_orientation(path):
 
 # main content
 st.markdown("""
-<div style="
-    background: linear-gradient(135deg, #ffe6ea 0%, #fff5f7 100%);
-    padding: 25px 20px;
-    border-radius: 18px;
-    text-align: center;
-    margin-bottom: 20px;
-    border: 1px solid #ffd6e0;
-">
-    <h1 style="
-        color:#b3003b;
-        font-size: 42px;
-        margin-bottom: 6px;
-        font-weight: 700;
-    ">🇯🇵 2025 Japan Trip Blog</h1>
-</div>
-""", unsafe_allow_html=True)
+# 🗺️ 2025 Japan Trip Blog  
+### Tokyo • Osaka • Kyoto • Hakone
+""")
 
 tab1, tab2, tab3, tab4 = st.tabs(["Map", "Itinerary", "Highlights", "Gallery"])
 
