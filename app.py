@@ -186,8 +186,8 @@ with tab1:
         
         st.session_state.map = m
 
-    folium_static(st.session_state.map, use_container_width=True)
-    #st_folium(st.session_state.map, use_container_width=True)
+
+    st_folium(st.session_state.map, use_container_width=True)
 
 with tab2:
     itinerary = [
