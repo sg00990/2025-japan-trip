@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import folium
-from streamlit_folium import st_folium, folium_static
+from streamlit_folium import st_folium
 import base64
 import os
 from PIL import Image, ExifTags, ImageOps
