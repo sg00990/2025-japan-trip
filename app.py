@@ -121,6 +121,12 @@ with tab1:
     }
 
     df = pd.DataFrame(places)
+
+    col1,col2,col3 = st.columns(3)
+    col1.metric("🗼 Areas Visited", df["place"].nunique())
+    col2.metric("📸 Total Photos", "518")
+    col3.metric("📅 Trip Length", "12 days")
+    
     # center map on Tokyo
     m = folium.Map(location=[35.68, 139.76], zoom_start=11)
 
