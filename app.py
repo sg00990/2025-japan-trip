@@ -194,7 +194,8 @@ with tab3:
     st.divider()
     
     col5, col6 = st.columns([1, 3])
-    img = ImageOps.exif_transpose('img/febcafe.jpg')
+    img = Image.open('img/febcafe.jpg')
+    img = ImageOps.exif_transpose(img)
     col5.image(img)
     col6.subheader('*3) February Café*')
     col6.write("""Just a short walk from our hotel in Asakusa was the cutest little spot called February Café, known for its delicious toast. Since my friend and I always got there early, we had our pick between the butter toast set and the cheese toast set. I went with the butter toast both times and honestly, I still think about it in the mornings.""")
@@ -224,7 +225,8 @@ with tab3:
     st.divider()
 
     col13, col14 = st.columns([1, 3])
-    img = ImageOps.exif_transpose('img/soba.jpg')
+    img = Image.open('img/soba.jpg')
+    img = ImageOps.exif_transpose(img)
     col13.image(img)
     col14.subheader('*7) Soba at Kanda Matsuya*')
     col14.write("""Before this trip, my only experience with soba was from a microwavable cup or a quick meal at Haneda Airport, so when my friend and I found ourselves near Akihabara, we decided to try real soba at a restaurant called Kanda Matsuya. There was a bit of a wait, but it was absolutely worth it.""")
@@ -239,7 +241,8 @@ with tab3:
     st.divider()
 
     col17, col18 = st.columns([1, 3])
-    img = ImageOps.exif_transpose('img/misc/IMG_1498.jpg')
+    img = Image.open('img/misc/IMG_1498.jpg')
+    img = ImageOps.exif_transpose(img)
     col17.image(img)
     col18.subheader('*9) Mt. Fuji from the Plane*')
     col18.write("""As we were arriving in Japan, I thought it was a little strange that our plane started looping north of Haneda Airport. But then I realized what was happening. The pilots were giving everyone a perfect view of Mt. Fuji! It felt like the best possible welcome to the country.""")
@@ -247,7 +250,8 @@ with tab3:
     st.divider()
 
     col19, col20 = st.columns([3, 1])
-    img = ImageOps.exif_transpose('img/misc/IMG_1975.jpg')
+    img = Image.open('img/misc/IMG_1975.jpg')
+    img = ImageOps.exif_transpose(img)
     col20.image(img)
     col19.subheader('*10) Going to the Movie Theater*')
     col19.write("""While we were in Japan, Jujutsu Kaisen: Execution came out in theaters. Since it wouldn’t be released in the U.S. for another month, we figured why not watch it here? And honestly, Japanese movie theaters are amazing!""")
