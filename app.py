@@ -194,7 +194,8 @@ with tab3:
     st.divider()
     
     col5, col6 = st.columns([1, 3])
-    col5.image('img/febcafe.jpg', width='stretch')
+    img = ImageOps.exif_transpose('img/febcafe.jpg')
+    col5.image(img)
     col6.subheader('*3) February Café*')
     col6.write("""Just a short walk from our hotel in Asakusa was the cutest little spot called February Café, known for its delicious toast. Since my friend and I always got there early, we had our pick between the butter toast set and the cheese toast set. I went with the butter toast both times and honestly, I still think about it in the mornings.""")
     col6.write("""It’s a thick, warm slice of toast layered with butter and syrup, with just the slightest hint of cinnamon. If you’re ever in Asakusa, I definitely recommend making a stop here!""")
@@ -223,7 +224,8 @@ with tab3:
     st.divider()
 
     col13, col14 = st.columns([1, 3])
-    col13.image('img/soba.jpg')
+    img = ImageOps.exif_transpose('img/soba.jpg')
+    col13.image(img)
     col14.subheader('*7) Soba at Kanda Matsuya*')
     col14.write("""Before this trip, my only experience with soba was from a microwavable cup or a quick meal at Haneda Airport, so when my friend and I found ourselves near Akihabara, we decided to try real soba at a restaurant called Kanda Matsuya. There was a bit of a wait, but it was absolutely worth it.""")
     col14.write("""I ordered kitsune soba, which comes topped with a piece of deep-fried tofu, and a drink listed as “soda pop.” The soba was amazing, but the surprise star was the “soda pop,” which turned out to be Mitsuya Cider. It instantly became my new favorite soda. It tastes like a cross between Sprite and ginger ale, but lighter and a little sweeter. Highly recommend trying it if you see it!""")
@@ -237,14 +239,16 @@ with tab3:
     st.divider()
 
     col17, col18 = st.columns([1, 3])
-    col17.image('img/misc/IMG_1498.jpg')
+    img = ImageOps.exif_transpose('img/misc/IMG_1498.jpg')
+    col17.image(img)
     col18.subheader('*9) Mt. Fuji from the Plane*')
     col18.write("""As we were arriving in Japan, I thought it was a little strange that our plane started looping north of Haneda Airport. But then I realized what was happening. The pilots were giving everyone a perfect view of Mt. Fuji! It felt like the best possible welcome to the country.""")
     col18.write("""Seeing the mountain rising behind a sea of buildings was incredible. It’s such a surreal contrast: this massive, snow-topped peak towering behind Tokyo’s dense skyline. Definitely one of the coolest views I’ve ever had from a plane.""")
     st.divider()
 
     col19, col20 = st.columns([3, 1])
-    col20.image('img/misc/IMG_1975.jpg')
+    img = ImageOps.exif_transpose('img/misc/IMG_1975.jpg')
+    col20.image(img)
     col19.subheader('*10) Going to the Movie Theater*')
     col19.write("""While we were in Japan, Jujutsu Kaisen: Execution came out in theaters. Since it wouldn’t be released in the U.S. for another month, we figured why not watch it here? And honestly, Japanese movie theaters are amazing!""")
     col19.write("""The food prices were so much lower than back home, and we even got little snack trays that attach to the cup holder (10/10 design innovation). At the end of the movie, they handed out a special postcard as a bonus.""")
