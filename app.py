@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import folium
-from streamlit_folium import st_folium
+from streamlit_folium import st_folium, folium_static
 import base64
 import os
 from PIL import Image, ExifTags, ImageOps
@@ -185,8 +185,9 @@ with tab1:
                 ).add_to(m)
         
         st.session_state.map = m
-    
-    st_folium(st.session_state.map, use_container_width=True)
+
+    folium_static(st.session_state.map, use_container_width=True)
+    #st_folium(st.session_state.map, use_container_width=True)
 
 with tab2:
     itinerary = [
