@@ -122,10 +122,41 @@ with tab1:
 
     df = pd.DataFrame(places)
 
-    col1,col2,col3 = st.columns(3)
-    col1.metric("🗼 Areas Visited", df["place"].nunique())
-    col2.metric("📸 Total Photos", "518")
-    col3.metric("📅 Trip Length", "12 days")
+    col1, col2, col3 = st.columns(3)
+
+    metric_style = """
+        font-size:16px;
+        background-color:#fff5f7;
+        padding:18px 20px;
+        border-radius:16px;
+        border:1px solid #ffd6e0;
+        box-shadow:2px 2px 8px rgba(0,0,0,0.05);
+        text-align:center;
+    """
+    
+    col1.markdown(f"""
+        <div style="{metric_style}">
+            <div style="font-size:28px;">🗼</div>
+            <div style="font-weight:600; margin-top:4px;">Areas Visited</div>
+            <div style="font-size:22px; color:#b3003b;">{df["place"].nunique()}</div>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    col2.markdown(f"""
+        <div style="{metric_style}">
+            <div style="font-size:28px;">📸</div>
+            <div style="font-weight:600; margin-top:4px;">Total Photos</div>
+            <div style="font-size:22px; color:#b3003b;">518</div>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    col3.markdown(f"""
+        <div style="{metric_style}">
+            <div style="font-size:28px;">📅</div>
+            <div style="font-weight:600; margin-top:4px;">Trip Length</div>
+            <div style="font-size:22px; color:#b3003b;">12 days</div>
+        </div>
+    """, unsafe_allow_html=True)
     
     # center map on Tokyo
     m = folium.Map(location=[35.68, 139.76], zoom_start=11)
