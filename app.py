@@ -107,7 +107,6 @@ def open_image_correct_orientation(path):
 
 # main content
 st.title("**2025 Japan Trip Blog**")
-st.caption("*November 1-12*")
 
 tab1, tab2, tab3, tab4 = st.tabs(["Map", "Itinerary", "Highlights", "Gallery"])
 
