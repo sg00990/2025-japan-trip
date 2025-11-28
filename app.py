@@ -78,10 +78,13 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-def embed_image(path, width=200):
-    with open(path, "rb") as f:
-        img = base64.b64encode(f.read()).decode()
-    return f'<img src="data:image/jpeg;base64,{img}" width="{width}"/>'
+def embed_image(path, max_width=200):
+    img = Image.open(path)
+    img.thumbnail((max_width, max_width))  # reduce size
+    buffer = io.BytesIO()
+    img.save(buffer, format="JPEG")
+    b64 = base64.b64encode(buffer.getvalue()).decode()
+    return f'<img src="data:image/jpeg;base64,{b64}" width="{max_width}"/>'
 
 def open_image_correct_orientation(path):
     img = Image.open(path)
