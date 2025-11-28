@@ -234,6 +234,21 @@ with tab3:
     col15.subheader('*8) Odaiba at Night*')
     col15.write("""On our last full day in Japan, my friend and I decided to spend the evening in Odaiba and it ended up being one of the most beautiful nights of the trip. We explored teamLab Planets, wandered through three different shopping malls, and even stopped by the Odaiba Statue of Liberty. But nothing prepared us for how magical the area looks after dark.""")
     col15.write("""As we stepped out of DiverCity, we were immediately met with the massive Gundam statue glowing against the night sky. Then, as we walked toward DECKS, the view opened up to the Rainbow Bridge and a skyline of skyscrapers shimmering across the water. Even the Statue of Liberty replica looked cooler at night, illuminated with the city behind it. We honestly couldn’t stop saying “whoa” as we walked along the waterfront.""")
+    st.divider()
+
+    col17, col18 = st.columns([1, 3])
+    col17.image('img/misc/IMG_1498.jpg')
+    col18.subheader('*9) Mt. Fuji from the Plane*')
+    col18.write("""As we were arriving in Japan, I thought it was a little strange that our plane started looping north of Haneda Airport. But then I realized what was happening. The pilots were giving everyone a perfect view of Mt. Fuji! It felt like the best possible welcome to the country.""")
+    col18.write("""Seeing the mountain rising behind a sea of buildings was incredible. It’s such a surreal contrast: this massive, snow-topped peak towering behind Tokyo’s dense skyline. Definitely one of the coolest views I’ve ever had from a plane.""")
+    st.divider()
+
+    col19, col20 = st.columns([3, 1])
+    col20.image('img/misc/IMG_1975.jpg')
+    col19.subheader('*10) Going to the Movie Theater*')
+    col19.write("""While we were in Japan, Jujutsu Kaisen: Execution came out in theaters. Since it wouldn’t be released in the U.S. for another month, we figured why not watch it here? And honestly, Japanese movie theaters are amazing!""")
+    col19.write("""The food prices were so much lower than back home, and we even got little snack trays that attach to the cup holder (10/10 design innovation). At the end of the movie, they handed out a special postcard as a bonus.""")
+    col19.write("""I haven’t been keeping up with my Japanese as much lately, but I was proud to understand about 50–60% of the dialogue. Overall, such a fun experience and definitely something I want to do again next time.""")
 
 with tab4:
     folder = "img/misc"
