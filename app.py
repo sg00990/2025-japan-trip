@@ -4,7 +4,7 @@ import folium
 from streamlit_folium import st_folium
 import base64
 import os
-from PIL import Image, ExifTags
+from PIL import Image, ExifTags, ImageOps
 
 # page settings
 st.set_page_config(
@@ -190,4 +190,5 @@ with tab4:
     for i, p in enumerate(photos):
         img_path = os.path.join(folder, p)  # full path to the image
         img = Image.open(img_path)
+        im = ImageOps.exif_transpose(im)
         cols[i % 2].image(img, use_column_width=True)
