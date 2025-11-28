@@ -6,6 +6,70 @@ import base64
 import os
 from PIL import Image, ExifTags, ImageOps
 
+theme_css = """
+<style>
+/* Page background */
+html, body, [class*="css"]  {
+    background-color: #faf7f8 !important;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: #b3003b !important;
+    font-weight: 700 !important;
+}
+
+/* Default text */
+p, span, div {
+    color: #444 !important;
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab"] {
+    background-color: #ffd6e0 !important;
+    color: #b3003b !important;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 16px !important;
+    font-weight: 600;
+}
+.stTabs [data-baseweb="tab"][aria-selected="true"] {
+    background-color: #ffccd5 !important;
+    color: #80002a !important;
+}
+
+/* Itinerary cards */
+.itinerary-card {
+    padding:16px;
+    border-radius:12px;
+    background-color:#fff0f4;
+    border:1px solid #ffd6e0;
+    margin-bottom:12px;
+}
+
+/* Day label */
+.day-label {
+    display:inline-block;
+    background:#ffccd5;
+    color:#b3003b;
+    padding:4px 10px;
+    border-radius:8px;
+    font-weight:600;
+    font-size:14px;
+    margin-bottom:6px;
+}
+
+/* Divider */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ffccd5;
+    margin: 2rem 0;
+}
+</style>
+"""
+
+st.markdown(theme_css, unsafe_allow_html=True)
+
 # page settings
 st.set_page_config(
     page_title="2025 Japan Trip Blog",
@@ -45,7 +109,7 @@ def open_image_correct_orientation(path):
 st.header("**2025 Japan Trip Blog**")
 st.write("*November 1-12*")
 
-tab1, tab2, tab3, tab4, tab5 = st.tabs(["Map", "Itinerary", "Highlights", "Gallery", "Thoughts"])
+tab1, tab2, tab3, tab4 = st.tabs(["Map", "Itinerary", "Highlights", "Gallery"])
 
 with tab1:
     places = {
@@ -99,26 +163,10 @@ with tab2:
     for stop in itinerary:
         with st.container():
             st.markdown(f"""
-            <div style="
-                padding:16px;
-                border-radius:12px;
-                background-color:#f8f8f8;
-                margin-bottom:12px;
-            ">
-                <span style="
-                    display:inline-block;
-                    background:#ffccd5;
-                    color:#b3003b;
-                    padding:4px 10px;
-                    border-radius:8px;
-                    font-weight:600;
-                    font-size:14px;
-                    margin-bottom:6px;
-                ">
-                    {stop['day']}
-                </span>
-                <h4 style="margin:6px 0 2px 0; color:#333333;">{stop['place']}</h4>
-                <p style="font-size:14px; color:#555;">{stop['notes']}</p>
+            <div class="itinerary-card">
+                <span class="day-label">{stop['day']}</span>
+                <h4 style="margin:6px 0 2px 0;">{stop['place']}</h4>
+                <p style="font-size:14px;">{stop['notes']}</p>
             </div>
             """, unsafe_allow_html=True)
 
