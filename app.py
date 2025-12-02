@@ -74,7 +74,6 @@ st.markdown(theme_css, unsafe_allow_html=True)
 # page settings
 st.set_page_config(
     page_title="2025 Japan Trip Blog",
-    page_icon="🇯🇵",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -131,7 +130,7 @@ def open_image_correct_orientation(path):
 
 # main content
 st.markdown("""
-# 🇯🇵 2025 Japan Trip Blog  
+# 2025 Japan Trip Blog  
 ###### Tokyo • Yokohama • Chiba
 """)
 
